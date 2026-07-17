@@ -33,10 +33,3 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(form);
-  const company = data.get('company') || 'your company';
-  formNote.textContent = `Quote request captured for ${company}. Connect the form to your preferred inbox or CRM to receive live submissions.`;
-  formNote.classList.add('success');
-});
